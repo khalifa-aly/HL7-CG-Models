@@ -1,5 +1,4 @@
 Logical: MolecularSequence
-Parent: Element
 Title: "Molecular Sequence"
 Description: "Next version of MolecularSequence resource"
 * name 0..1 string
@@ -8,7 +7,7 @@ Description: "Next version of MolecularSequence resource"
 * type 1..1 CodeableConcept
   "The type of sequence (genomic, mRNA, protein, ...)"
   "The type of the sequence.  Ideally, a code from an ontology would be used to designate genomic (including plasmid and short oligonucleotides), RNA (including mRNA, tRNA, ncRNA, etc), and protein (including short peptides).  The bindings for this element have not yet been determined."
-* identifier 0..* GenomeSequenceDesignation | IdentifierSequenceDesignation
+* identifier[x] 0..* GenomeSequenceDesignation or IdentifierSequenceDesignation
   "Identifier(s) for the sequence"
   "Identifier(s) for the sequence."
 * representations 0..* BackboneElement

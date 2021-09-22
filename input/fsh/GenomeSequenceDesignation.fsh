@@ -1,7 +1,6 @@
 Logical: GenomeSequenceDesignation
-Parent: Element
 Title: "Genome Sequence Designation"
-Description: "Datatype to support FHIR Genomics.  This datatype supports representations like "GRCH38.p13 Chromosome 1".
+Description: "Datatype to support FHIR Genomics.  This datatype supports representations like GRCH38.p13 Chromosome 1"
 * build 1..1 Identifier
   "Genome build id"
   "The identifier of a genome build, which contains a sequence of interest."

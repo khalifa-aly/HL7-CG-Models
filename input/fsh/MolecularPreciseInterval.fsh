@@ -1,5 +1,4 @@
 Logical: MolecularPreciseInterval
-Parent: Element
 Title: "Molecular Precise Interval"
 Description: "Represents a precise interval with a specific coordinate-based start and end position"
 * numberingSystem 1..1 code
