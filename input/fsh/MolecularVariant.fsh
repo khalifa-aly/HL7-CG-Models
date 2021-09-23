@@ -75,7 +75,7 @@ Description: "MolecularVariant resource"
   "Defines a relationship between the source Variant and a target Variant."
   * type 1..1 CodeableConcept
     "Type"
-    "Type of relationship (e.g., a genomic variant might have a relationship of 'predicted translation to' a variant expressed at the protein level)
+    "Type of relationship (e.g., a genomic variant might have a relationship of 'predicted translation to' a variant expressed at the protein level)"
   * description 0..1 string
     "Description"
     "Text description of the relationship"
