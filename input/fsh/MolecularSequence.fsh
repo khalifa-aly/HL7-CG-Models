@@ -13,7 +13,7 @@ Description: "Next version of MolecularSequence resource"
 * representations 0..* BackboneElement
   "Represents the many different ways a molecular sequence could be represented"
   "This element allows a single instance of Sequence to be represented in many different ways, including different file formats."
-  * simple 0..1 BackboneElement
+  * literal 0..1 BackboneElement
     "Literal sequence"
     "A sequence represented as a literal string"
     * encoding 0..1 CodeableConcept

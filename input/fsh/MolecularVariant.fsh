@@ -2,83 +2,83 @@ Logical: MolecularVariant
 Title: "Molecular Variant"
 Description: "MolecularVariant resource"
 * molecularType 0..1 CodeableConcept
-  "The type of molecule"
-  "The type of molecule"
+  "Molecule type"
+  "The type of molecule (e.g., DNA, RNA, protein)"
 * primaryRepresentation 1..1 BackboneElement
   "Primary Representation"
+  "A representation for the Variant that is used as its primary definition."
   * identifier 0..1 CodeableConcept
     "Identifer"
-    "Identifer based representation of a variant"
+    "Identifer based representation of a variant. The source of the identifier is specified using the URI recorded in the system attribute."
   * text 0..1 BackboneElement
     "Text"
-    "Text based representations"
+    "Text based representation of a variant, including nomenclatures such as HGVS, ISCN, HLA, and pharmacogenetic star alleles."
     * value 1..1 string
     "Value"
     "Value for the textual representation"
     * system 1..1 CodeableConcept
     "System"
-    "System where the value was drawn from"
+    "System that defines the nomenclature (including version, if applicable)"
   * sequence 0..1 BackboneElement
     "Sequence"
     "Sequence based representation of a variant"
-    * interval 1..1 MolecularPreciseInterval
-      "Interval"
-      "Coordinates of the variant"
-    * referenceSequence[x] 1..1 GenomeSequenceDesignation or IdentifierSequenceDesignation
-      "Reference Sequence"
-      "Reference Sequence"
-    * referenceAllele 0..1 Reference(MolecularSequence)
-      "Reference Allele"
-      "Reference Allele"
-    * alernateAllele 1..1 Reference(MolecularSequence)
-      "Alternat Allele"
-      "Alternate Allele"
     * system 1..1 CodeableConcept
       "System"
-      "Specifying the format that defines the meaning of this sequence which may include business rules governing their interpretation (e.g. left versus right shifting)"
+      "The system that specifies how this information should be interpreted, since systems may include different business rules governing interpretation (e.g. VCF left shifts while HGVS right shifts)"
+    * referenceSequence[x] 1..1 GenomeSequenceDesignation or IdentifierSequenceDesignation
+      "Reference Sequence"
+      "Sequence used as a reference for defining the state expressed by the Variant"
+    * interval 1..1 MolecularPreciseInterval
+      "Interval"
+      "Coordinates of the variant. Note the interpretation of these coordinates may be subject to system-specific business rules or conventions (e.g., 0-based or 1-based)."
+    * referenceAllele 0..1 Reference(MolecularSequence)
+      "Reference Allele"
+      "The allele found in the Reference Sequence at the location specified by Interval."
+    * alternateAllele 1..1 Reference(MolecularSequence)
+      "Alternate Allele"
+      "The state of the sequence at the location specified by Interval, which defines this Variant."
 * secondaryRepresentation 0..* BackboneElement
-  "Secondary Representation"
-  "Include any number of alternative representations for the variant"
+  "Secondary Representation(s)"
+  "Alternative representations of the variant that might be considered to be equivalent but which might contain ambiguity or imprecision. Lossless transformations between the Primary and Secondary Representation(s) are not guaranteed."
   * identifier 0..1 CodeableConcept
     "Identifer"
-    "Identifer based representation of a variant"
+    "Identifer based representation of a variant. The source of the identifier is specified using the URI recorded in the system attribute."
   * text 0..1 BackboneElement
     "Text"
-    "Text based representations"
+    "Text based representation of a variant, including nomenclatures such as HGVS, ISCN, HLA, and pharmacogenetic star alleles."
     * value 1..1 string
     "Value"
     "Value for the textual representation"
     * system 1..1 CodeableConcept
     "System"
-    "System where the value was drawn from"
+    "System that defines the nomenclature (including version, if applicable)"
   * sequence 0..1 BackboneElement
     "Sequence"
     "Sequence based representation of a variant"
-    * interval 1..1 MolecularPreciseInterval
-      "Interval"
-      "Coordinates of the variant"
-    * referenceSequence[x] 1..1 GenomeSequenceDesignation or IdentifierSequenceDesignation
-      "Reference Sequence"
-      "Reference Sequence"
-    * referenceAllele 0..1 Reference(MolecularSequence)
-      "Reference Allele"
-      "Reference Allele"
-    * alernateAllele 1..1 Reference(MolecularSequence)
-      "Alternat Allele"
-      "Alternate Allele"
     * system 1..1 CodeableConcept
       "System"
-      "Specifying the format that defines the meaning of this sequence which may include business rules governing their interpretation (e.g. left versus right shifting)"
+      "The system that specifies how this information should be interpreted, since systems may include different business rules governing interpretation (e.g. VCF left shifts while HGVS right shifts)"
+    * referenceSequence[x] 1..1 GenomeSequenceDesignation or IdentifierSequenceDesignation
+      "Reference Sequence"
+      "Sequence used as a reference for defining the state expressed by the Variant"
+    * interval 1..1 MolecularPreciseInterval
+      "Interval"
+      "Coordinates of the variant. Note the interpretation of these coordinates may be subject to system-specific business rules or conventions (e.g., 0-based or 1-based)."
+    * referenceAllele 0..1 Reference(MolecularSequence)
+      "Reference Allele"
+      "The allele found in the Reference Sequence at the location specified by Interval."
+    * alternateAllele 1..1 Reference(MolecularSequence)
+      "Alternate Allele"
+      "The state of the sequence at the location specified by Interval, which defines this Variant."
 * relationships 0..* BackboneElement
-  "Relationships"
-  "Other variants related to this variant"
+  "Relationship to another Variant"
+  "Defines a relationship between the source Variant and a target Variant."
   * type 1..1 CodeableConcept
     "Type"
-    "Type of relationship"
+    "Type of relationship (e.g., a genomic variant might have a relationship of 'predicted translation to' a variant expressed at the protein level)
   * description 0..1 string
     "Description"
-    "Further description of the relationship"
+    "Text description of the relationship"
   * relatedVariant 1..1 Reference(MolecularVariant)
     "Related Variant"
-    "Target variant in the relationship"
-    
+    "Target variant of the relationship"
