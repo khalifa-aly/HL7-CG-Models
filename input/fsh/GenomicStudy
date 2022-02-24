@@ -5,7 +5,10 @@ Description: "Including related information to a genomic study, such as procedur
 * value 1..1 string
 * subject 0..* Patient
 * startDate 0..1 dateTime
+* basedOn 0..* ServiceRequest|Task // we may add more later
+* endpoint 0..* Endpoint
 * note 0..* Annotation
 * description 0..* string
 * reasonCode 0..* codeableConcept
+* ReasonReference 0..* Condition|Observation // we may add more later
 
