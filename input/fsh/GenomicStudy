@@ -2,6 +2,7 @@ Logical: GenomicStudy
 Title: "Genomic Study"
 Description: "Including related information to a genomic study, such as procedures, stakeholders, and others"
 * identifier[x] 0..* identifier "One or more identifier for this genomic study" "One or more identifier for this genomic study"
+* type 0..1 CodeableConcept
 * subject 0..* Patient "Subject(s) of this genomic study" "Subject(s) of this genomic study"
 * startDate 0..1 dateTime
 * basedOn 0..* ServiceRequest or Task // we may add more later
