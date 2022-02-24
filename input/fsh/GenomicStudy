@@ -4,10 +4,10 @@ Description: "Including related information to a genomic study, such as procedur
 * identifier[x] 0..* identifier "One or more identifier for this genomic study" "One or more identifier for this genomic study"
 * subject 0..* Patient "Subject(s) of this genomic study" "Subject(s) of this genomic study"
 * startDate 0..1 dateTime
-* basedOn 0..* ServiceRequest|Task // we may add more later
+* basedOn 0..* ServiceRequest or Task // we may add more later
 * endpoint 0..* Endpoint
 * note 0..* Annotation
 * description 0..* string
 * reasonCode 0..* codeableConcept
-* ReasonReference 0..* Condition|Observation // we may add more later
+* ReasonReference 0..* Reference(Condition or Observation) // we may add more later
 
