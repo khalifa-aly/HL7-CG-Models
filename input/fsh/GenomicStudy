@@ -10,4 +10,3 @@ Description: "Including related information to a genomic study, such as procedur
 * description 0..* string
 * reasonCode 0..* codeableConcept
 * ReasonReference 0..* Reference(Condition or Observation) // we may add more later
-
