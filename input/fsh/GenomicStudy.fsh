@@ -5,7 +5,7 @@ Description: "Including related information to a genomic study, such as procedur
   "One or more identifier for this genomic study" "One or more identifier for this genomic study"
 * status 1..1 CodeableConcept
   "The status of the genomic study resource"
-* device 0..* device
+* device 0..* Device
   "The involved devices in this study, e.g., sequencers"
 * type 0..1 CodeableConcept
   "Here is the type"
@@ -35,4 +35,3 @@ Description: "Including related information to a genomic study, such as procedur
   "Here is a note"
 * description 0..* string
   "Here is a description"
-  
