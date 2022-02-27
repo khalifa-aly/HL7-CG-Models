@@ -21,7 +21,8 @@ Description: "Including related information to a genomic study, such as procedur
   "Healthcare professional(s) who requested or referred this genomic study"
 * interpreter 0..* Reference(Practitioner or PractitionerRole)
   "Healthcare professional(s) who reviewed the raw data and provided the related interpretation"
-* prodecure 0..* CodeableReference(Procedure)
+//* prodecure 0..* CodeableReference(Procedure)
+* procedure 0..* Reference(Procedure)
   "The performed procedure(s) or its(their) code(s)"
 * endpoint 0..* Endpoint
   "Here is the end point"
