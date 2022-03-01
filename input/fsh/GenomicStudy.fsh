@@ -49,4 +49,3 @@ Description: "Including related information to a genomic study, such as procedur
     * date 0..1 dateTime "Date of this genomic assay"
     * regionStudied 0..1 CodeableConcept "Region Studied" // we may change this datatype later
     * genomicFile 0..* DocumentReference "Relevant genomic files"
-
