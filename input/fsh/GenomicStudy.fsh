@@ -1,7 +1,7 @@
 Logical: GenomicStudy
 Title: "Genomic Study"
 Description: "Including related information to a genomic study, such as procedures, stakeholders, and others"
-* identifier[x] 0..* identifier 
+* identifier 0..* Identifier 
   "One or more identifier for this genomic study" "One or more identifier for this genomic study"
 * status 1..1 CodeableConcept
   "The status of the genomic study resource"
@@ -36,3 +36,10 @@ Description: "Including related information to a genomic study, such as procedur
   "Here is a note"
 * description 0..* string
   "Here is a description"
+* genomicAnalysis 0..* BackboneElement
+  "Genomic Analysis"
+  * identifier 0..* Identifier "Identifier"
+  * methodType 0..1 CodeableConcept "Type of the used method"
+  * protocolDefinition 0..* ActivityDefinition "Protocol Definition"
+  * protocolPerformed 0..* Procedure "Protocol Performed"
+
