@@ -27,7 +27,7 @@ Description: "Including related information to a genomic study, such as procedur
 * endpoint 0..* Endpoint
   "Here is the end point"
 * reason 0..* CodeableReference(Condition or Observation)
-  "Here is a reason code"
+  "reason code(s) or relevant condition(s) or observation(s) references"
 //* reasonCode 0..* CodeableConcept
 //  "Here is a reason code"
 // we may add more later
