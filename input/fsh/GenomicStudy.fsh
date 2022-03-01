@@ -21,17 +21,18 @@ Description: "Including related information to a genomic study, such as procedur
   "Healthcare professional(s) who requested or referred this genomic study"
 * interpreter 0..* Reference(Practitioner or PractitionerRole)
   "Healthcare professional(s) who reviewed the raw data and provided the related interpretation"
-//* prodecure 0..* CodeableReference(Procedure)
-* procedure 0..* Reference(Procedure)
+* prodecure 0..* CodeableReference(Procedure)
+//* procedure 0..* Reference(Procedure)
   "The performed procedure(s) or its(their) code(s)"
 * endpoint 0..* Endpoint
   "Here is the end point"
-//* reason 0..* CodeableReference(Condition or Observation)
-* reasonCode 0..* CodeableConcept
+* reason 0..* CodeableReference(Condition or Observation)
   "Here is a reason code"
+//* reasonCode 0..* CodeableConcept
+//  "Here is a reason code"
 // we may add more later
-* reasonReference 0..* Reference(Condition or Observation)
-  "Here is a reason reference"
+//* reasonReference 0..* Reference(Condition or Observation)
+//  "Here is a reason reference"
 * note 0..* Annotation
   "Here is a note"
 * description 0..* string
