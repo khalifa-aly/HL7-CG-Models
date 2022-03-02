@@ -21,12 +21,13 @@ Description: "Including related information to a genomic study, such as procedur
   "Healthcare professional(s) who requested or referred this genomic study"
 * interpreter 0..* Reference(Practitioner or PractitionerRole)
   "Healthcare professional(s) who reviewed the raw data and provided the related interpretation"
-* prodecure 0..* CodeableReference(Procedure)
-//* procedure 0..* Reference(Procedure)
+//* procedure 0..* CodeableReference -- note, not part of R4
+* procedure[x] 0..* CodeableConcept or Reference(Procedure)
   "The performed procedure(s) or its(their) code(s)"
 * endpoint 0..* Endpoint
   "Here is the end point"
-* reason 0..* CodeableReference(Condition or Observation)
+//* reason 0..* CodeableReference  -- note, not part of R4
+* reason[x] 0..* CodeableConcept or Reference(Condition or Observation)
   "reason code(s) or relevant condition(s) or observation(s) references"
 //* reasonCode 0..* CodeableConcept
 //  "Here is a reason code"
@@ -41,12 +42,12 @@ Description: "Including related information to a genomic study, such as procedur
   "Genomic Analysis"
   * identifier 0..* Identifier "Identifier"
   * methodType 0..1 CodeableConcept "Type of the used method"
-  * protocolDefinition 0..* ActivityDefinition "Protocol Definition"
-  * protocolPerformed 0..* Procedure "Protocol Performed"
+  * protocolDefinition 0..* Reference(ActivityDefinition) "Protocol Definition"
+  * protocolPerformed 0..* Reference(Procedure) "Protocol Performed"
   * genomicAssay 0..* BackboneElement "Genomic Assay"
     * identifier 0..1 Identifier "Identifier"
     * specimen 0..* Reference(Specimen) "Specimen"
-    * subject 0..* Patient "Subject(s) of this genomic assay"
+    * subject 0..* Reference(Patient) "Subject(s) of this genomic assay"
     * date 0..1 dateTime "Date of this genomic assay"
-    * regionStudied 0..1 RegionStudied "Region Studied"
-    * genomicFile 0..* DocumentReference "Relevant genomic files"
+    * regionStudied 0..1 Reference(Observation) "Region Studied"
+    * genomicFile 0..* Reference(DocumentReference) "Relevant genomic files"
