@@ -16,7 +16,7 @@ Description: "Including related information to a genomic study, such as procedur
 * startDate 0..1 dateTime
   "The start date of this genomic study"
 * basedOn 0..* Reference(ServiceRequest or Task)
-  "Here is based on"
+  "Event resources that this genomic study is based on"
 * referrer 0..1 Reference(Practitioner or PractitionerRole)
   "Healthcare professional(s) who requested or referred this genomic study"
 * interpreter 0..* Reference(Practitioner or PractitionerRole)
