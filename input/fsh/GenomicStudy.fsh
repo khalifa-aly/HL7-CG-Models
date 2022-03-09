@@ -1,6 +1,8 @@
 Logical: GenomicStudy
 Title: "Genomic Study"
 Description: "Including related information to a genomic study, such as procedures, stakeholders, and others"
+* ^baseDefinition = "http://hl7.org/fhir/StructureDefinition/DomainResource"
+* ^status = #draft
 * identifier 0..1 Identifier 
   "One or more identifier for this genomic study" "One or more identifier for this genomic study"
 * status 1..1 CodeableConcept
