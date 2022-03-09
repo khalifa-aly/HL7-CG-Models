@@ -8,13 +8,13 @@ Description: "Including related information to a genomic study, such as procedur
 * device 0..* Device
   "The involved devices in this study, e.g., sequencers"
 * type 0..1 CodeableConcept
-  "Here is the type"
+  "The type of this study"
 * subject 0..* Reference(Patient)
   "Subject(s) of this genomic study" "Subject(s) of this genomic study"
 * encounter 0..1 Reference(Encounter)
   "The healthcare encounter that involved this genomics study"
 * startDate 0..1 dateTime
-  "Here is the start date"
+  "The start date of this genomic study"
 * basedOn 0..* Reference(ServiceRequest or Task)
   "Here is based on"
 * referrer 0..1 Reference(Practitioner or PractitionerRole)
@@ -25,7 +25,7 @@ Description: "Including related information to a genomic study, such as procedur
 * procedure[x] 0..* CodeableConcept or Reference(Procedure)
   "The performed procedure(s) or its(their) code(s)"
 * endpoint 0..* Endpoint
-  "Here is the end point"
+  "The endpoint of this genomic study"
 //* reason 0..* CodeableReference  -- note, not part of R4
 * reason[x] 0..* CodeableConcept or Reference(Condition or Observation)
   "reason code(s) or relevant condition(s) or observation(s) references"
