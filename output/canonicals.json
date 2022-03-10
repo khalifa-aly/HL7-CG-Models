@@ -1,0 +1,51 @@
+[
+  {
+    "id": "hl7.fhir.uv.cg-model",
+    "type": "ImplementationGuide",
+    "url": "http://hl7.org/fhir/uv/cg-model/ImplementationGuide/hl7.fhir.uv.cg-model",
+    "version": "0.1.0",
+    "name": "HL7CGModels"
+  },
+  {
+    "id": "GenomeSequenceDesignation",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/uv/cg-model/StructureDefinition/GenomeSequenceDesignation",
+    "version": "0.1.0",
+    "name": "GenomeSequenceDesignation"
+  },
+  {
+    "id": "GenomicStudy",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/uv/cg-model/StructureDefinition/GenomicStudy",
+    "version": "0.1.0",
+    "name": "GenomicStudy"
+  },
+  {
+    "id": "IdentifierSequenceDesignation",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/uv/cg-model/StructureDefinition/IdentifierSequenceDesignation",
+    "version": "0.1.0",
+    "name": "IdentifierSequenceDesignation"
+  },
+  {
+    "id": "MolecularPreciseInterval",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/uv/cg-model/StructureDefinition/MolecularPreciseInterval",
+    "version": "0.1.0",
+    "name": "MolecularPreciseInterval"
+  },
+  {
+    "id": "MolecularSequence",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/uv/cg-model/StructureDefinition/MolecularSequence",
+    "version": "0.1.0",
+    "name": "MolecularSequence"
+  },
+  {
+    "id": "MolecularVariant",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/uv/cg-model/StructureDefinition/MolecularVariant",
+    "version": "0.1.0",
+    "name": "MolecularVariant"
+  }
+]
