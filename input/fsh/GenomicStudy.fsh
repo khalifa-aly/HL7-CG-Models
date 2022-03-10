@@ -42,6 +42,14 @@ Description: "A Genomic Study is a set of files and procedures that are performe
   * protocolDefinition 0..* Reference(ActivityDefinition) "The defined protocol that describes the analysis"
   //* protocolPerformed 0..* CodeableReference -- note, not part of R4
   * protocolPerformed 0..* Reference(Procedure) "The protocol that was actually performed for the analysis"
+  * performer 0..* Reference(Practitioner 
+                             or PractitionerRole 
+                             or Organization 
+                             or CareTeam 
+                             or Patient 
+                             or Device 
+                             or RelatedPerson)
+    "The organization, healthcare professional(s), or others who participated in performing this study"
   * device 0..* Device "The device(s) used for the analysis (e.g., sequencers)"
   * genomicFile 0..* Reference(DocumentReference) "Genomic data file(s) used in the analysis"
   * genomicAssay 0..* BackboneElement "Genomic Assay"
