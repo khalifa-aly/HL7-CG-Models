@@ -13,7 +13,7 @@ releaseLabel: ci-build
 publisher:
   name: Clinical Genomics
   url: http://example.org/example-publisher
-
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯

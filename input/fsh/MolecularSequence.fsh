@@ -1,6 +1,7 @@
 Logical: MolecularSequence
 Title: "Molecular Sequence"
 Description: "Next version of MolecularSequence resource"
+* ^baseDefinition = "http://hl7.org/fhir/StructureDefinition/DomainResource"
 * name 0..1 string
   "Name of sequence"
   "The human-readable name of the sequence."

@@ -1,6 +1,7 @@
 Logical: MolecularVariant
 Title: "Molecular Variant"
 Description: "MolecularVariant resource"
+* ^baseDefinition = "http://hl7.org/fhir/StructureDefinition/DomainResource"
 * molecularType 0..1 CodeableConcept
   "Molecule type"
   "The type of molecule (e.g., DNA, RNA, protein)"
