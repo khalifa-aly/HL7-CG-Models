@@ -1,6 +1,7 @@
 Logical: GenomeSequenceDesignation
 Title: "Genome Sequence Designation"
 Description: "Datatype to support FHIR Genomics.  This datatype supports representations like GRCH38.p13 Chromosome 1"
+* ^baseDefinition = "http://hl7.org/fhir/StructureDefinition/Element"
 * build 1..1 Identifier
   "Genome build id"
   "The identifier of a genome build, which contains a sequence of interest."
