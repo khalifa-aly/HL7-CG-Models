@@ -1,6 +1,6 @@
 # Genomic Study
 ## Content
-It aims at delineating relevant information of a genomic study of specific reason or use case, where one study could comprise one or more analyses that in turn could include one or more assays. Analyses may vary in method (e.g., karyotyping, CNV, or SNV detection), performer, used devices. While, assays may vary in region studied, specimen, or even subject.
+It aims at delineating relevant information of a genomic study of specific reasons or use cases. Where one study could comprise one or more analyses that in turn could include one or more assays. Analyses may vary in method (e.g., karyotyping, CNV, or SNV detection), performer, used devices. While, assays may vary in region studied, specimen, or even subject.
 ## Scope and Usage
 Genomic study describes relevant information including, reasons, purpose, and performers. It also provides technical endpoints to access these data. It could be a logical aggregator for complex genomic analyses, where each analysis may carry out various genomic assays of diverse methods. 
 It could be based on one or more care plans or service requests. The reasons of performing this genomic study could be [Conditions]( https://www.hl7.org/fhir/condition.html), [Observations]( https://www.hl7.org/fhir/observation.html), or as [Codeable Concepts]( https://www.hl7.org/fhir/datatypes.html#CodeableConcept) that represent these reasons. 
