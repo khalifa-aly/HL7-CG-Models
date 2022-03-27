@@ -11,7 +11,7 @@ The study interpreters use all the results of these various analyses to provide 
 
 The result files could be listed either on the analysis-level or assay-level based on their nature.
 ## Boundaries and Relationships
-Genomic study is used for genomic relevant information where result files are represented as [DocumentReference(s)]( https://www.hl7.org/fhir/documentreference.html) that include relevant metadata in addition the actual files as attachments.
+Genomic study is used for genomic relevant information where result files are represented as [DocumentReference(s)]( https://www.hl7.org/fhir/documentreference.html) that include relevant metadata in addition to links to actual files or as attachments.
 
 This resource could be referenced by Genomic Diagnostic Report or genomic observations, e.g., [Variant]( https://hl7.org/fhir/uv/genomics-reporting/variant.html), or [Genotype]( https://hl7.org/fhir/uv/genomics-reporting/genotype.html).
 ## Implementation Notes
