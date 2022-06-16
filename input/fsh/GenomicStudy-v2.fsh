@@ -1,6 +1,6 @@
-Resource: GenomicStudyV2
+Logical: GenomicStudyV2
 Id: genomic-study-v2
-Title: "Genomic Study"
+Title: "Genomic Study V2"
 Description: "A Genomic Study is a set of files and procedures that are performed to generate and analyze genomic data."
 * ^baseDefinition = "http://hl7.org/fhir/StructureDefinition/DomainResource"
 * ^status = #draft
