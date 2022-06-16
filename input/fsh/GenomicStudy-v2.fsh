@@ -39,7 +39,7 @@ Description: "A Genomic Study is a set of files and procedures that are performe
 * analysis 0..* BackboneElement
   "Genomic Analysis Event"
   * identifier 0..* Identifier "Identifier(s) for the analysis"
-  * instantiatesCanonical 0..1 canonical(PlanDefinition) "The defined protocol that describes the analysis"
+  * instantiatesCanonical 0..1 Reference(PlanDefinition) "The defined protocol that describes the analysis"
   * genomeBuild 0..1 CodeableConcept "Genome build that is used in this analysis"
   * methodType 0..* CodeableConcept   "Type of the methods used in the analysis"
   * instantiatesUri 0..1 uri "The URL pointing to an externally maintained protocol that describes the analysis"
